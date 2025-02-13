@@ -1,0 +1,153 @@
+/* ----- รีเซ็ตค่าเริ่มต้น ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* ----- กำหนดสีหลัก ----- */
+:root {
+    --primary-color: #007bff; /* สีฟ้าหลัก */
+    --primary-dark: #0056b3; /* สีฟ้าเข้มตอน hover */
+    --secondary-color: #f8f9fa; /* สีขาว */
+    --text-color: #333;
+    --container-bg: white;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ----- สไตล์ของ body ----- */
+body {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ----- กล่องคอนเทนเนอร์ ----- */
+.container {
+    background: var(--container-bg);
+    max-width: 700px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px var(--shadow-color);
+    text-align: center;
+}
+
+/* ----- หัวข้อหลัก ----- */
+h1 {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* ----- รายการผู้ใช้ ----- */
+.user-item {
+    background: linear-gradient(135deg, var(--primary-color), #009dff);
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.user-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* ----- เอฟเฟกต์ Hover ----- */
+.user-item:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* ----- ปุ่มย้อนกลับ ----- */
+.back-button {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: var(--primary-dark);
+}
+
+/* ----- ปุ่มทั่วไป (เช่นปุ่มดูโพสต์) ----- */
+button {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* ----- ส่วนแสดงรายละเอียดของผู้ใช้ ----- */
+.user-detail {
+    text-align: left;
+    padding: 10px;
+}
+
+.user-detail h2 {
+    color: var(--primary-color);
+    font-size: 22px;
+}
+
+.user-detail p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.user-detail strong {
+    color: var(--primary-dark);
+}
+
+/* ----- ความคิดเห็น ----- */
+.comments {
+    background: var(--secondary-color);
+    padding: 10px;
+    border-left: 3px solid var(--primary-color);
+    margin-top: 10px;
+}
+
+/* ----- Responsive Design (รองรับมือถือ) ----- */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .user-item {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .user-detail h2 {
+        font-size: 20px;
+    }
+
+    .user-detail p {
+        font-size: 14px;
+    }
+}
