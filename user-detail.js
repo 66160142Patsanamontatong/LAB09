@@ -9,8 +9,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         userDetail.innerHTML = `
             <h2>${user.name} (@${user.username})</h2>
-            <p>Email: ${user.email}</p>
-            <p>Website: <a href="http://${user.website}" target="_blank">${user.website}</a></p>
+            <p><strong>Email:</strong> ${user.email}</p>
+            <p><strong>Phone:</strong> ${user.phone}</p>
+            <p><strong>Website:</strong> <a href="http://${user.website}" target="_blank">${user.website}</a></p>
+            <p><strong>ที่อยู่:</strong> ${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}</p>
+            <p><strong>บริษัท:</strong> ${user.company.name} - "${user.company.catchPhrase}"</p>
         `;
 
         document.getElementById("view-posts").addEventListener("click", () => {
