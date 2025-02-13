@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>โพสต์ของผู้ใช้</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user-posts.css"> <!-- ใช้ CSS เฉพาะหน้านี้ -->
 </head>
 <body>
     <div class="container">
-        <a href="#" onclick="history.back()">← กลับ</a>
-        <h1>โพสต์ของ <span id="user-name"></span></h1>
+        <a href="#" class="back-button" onclick="history.back()">← กลับ</a>
+        <h1 id="posts-title">โพสต์ของ <span id="user-name"></span></h1>
         <div id="posts-list"></div>
     </div>
     <script src="user-posts.js"></script>
